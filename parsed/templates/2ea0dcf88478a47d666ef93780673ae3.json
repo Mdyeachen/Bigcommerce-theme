@@ -1,0 +1,3 @@
+{
+  "components/epicFooter/footer-store-info": "<h4>Store Information</h4>\r\n{{settings.store_name}}<br>\r\n{{settings.phone_number}}\r\n<p>{{{settings.address}}}</p>\r\n"
+}

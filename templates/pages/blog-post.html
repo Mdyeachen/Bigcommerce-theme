@@ -1,0 +1,83 @@
+---
+blog:
+
+    recent_posts:
+        limit: 3
+---
+{{#partial "page"}}
+
+<script type="application/ld+json" defer>
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{blog.post.url}}"
+  },
+  "headline": "{{blog.post.title}}",
+  "image": "{{getImage blog.post.thumbnail 'defaultImage'}}",  
+  "author": {
+    "@type": "Organization",
+    "name": "bodyjewelry.com",
+    "url": "https://bodyjewelry.com"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Avi Gidon",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://cdn11.bigcommerce.com/s-yfjn5bpc6d/images/stencil/380x88/bj-logo_1618602987__11455_1672260896.original.png"
+    }
+  }
+}
+</script>
+<section class="page single-blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="single-blog-heading text-center mb-3">
+                    <div class="single-blog-breadcome">
+                        <span>{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}</span>
+                        <span>{{#if blog.post.author}}{{lang 'blog.posted_by' name=blog.post.author}} on {{/if}}{{blog.post.date_published}}</span>
+                    </div>
+                    <h1 class="m-0">{{blog.post.title}}</h1>
+                </div>
+                <hr class="m-0">
+                <div class="single-blog-img mb-5">
+                    {{> components/common/responsive-img
+        				image=blog.post.thumbnail
+        				fallback_size=theme_settings.blog_size
+        				lazyload=disabled
+        				}}
+                    
+                <hr class="m-0">
+                </div>
+                <div class="single-blog-info">
+                    {{{blog.post.body}}}
+                    <div class="social-section">
+                        Share: {{>components/common/share url=post.url}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<hr>
+<section class="latest-posts">
+    <div class="container">
+        <div class="row">
+            <h3 class="">Latest Blogs</h3>
+        </div>
+        <div class="row">
+            {{#each blog.recent_posts}}
+                {{> components/blog/post post=this}}
+            {{/each}}
+        </div>
+    </div>
+</section> 
+
+
+
+{{/partial}}
+{{> layout/base}}

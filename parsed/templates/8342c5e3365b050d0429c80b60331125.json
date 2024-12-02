@@ -1,0 +1,3 @@
+{
+  "components/blog/post_home": "\r\n<div class=\"home-blog\">\r\n    <div class=\"homeBlog-img\">\r\n        {{#if recent_posts.thumbnail}}\r\n        <img src=\"{{getImage recent_posts.thumbnail 'defaultImage'}}\" alt=\"{{recent_posts.title}}\">\r\n        {{else}}\r\n            <img src=\"https://via.placeholder.com/300x300?text=Blog\" alt=\"{{recent_posts.title}}\">\r\n        {{/if}}\r\n    </div>\r\n    <div class=\"home-blog-content\">\r\n        <h3>{{recent_posts.title}}</h3>\r\n        <p>{{#if recent_posts.author}}{{lang 'blog.posted_by' name=recent_posts.author}} on {{/if}}{{recent_posts.date_published}}</p>\r\n        <a href=\"{{recent_posts.url}}\">Read More</a>\r\n    </div>\r\n</div>\n"
+}

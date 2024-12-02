@@ -1,0 +1,3 @@
+{
+  "ysw/addons/mega-nav/mega-nav-button": "<button\n    type=\"button\"\n    class=\"ysw-c-mega-nav__button ysw-c-mega-nav__button--{{position}}\"\n    aria-label=\"{{lang 'ysw.component.mega_scroll_menu.button' position=position}}\"\n    hidden\n>\n    <span class=\"ysw-c-mega-nav__button-icon\">\n        <i class=\"ysw-c-mega-nav__button-svg icon\" aria-hidden=\"true\">\n            <svg>\n                <use xlink:href=\"#icon-{{icon}}\"></use>\n            </svg>\n        </i>\n    </span>\n</button>\n"
+}

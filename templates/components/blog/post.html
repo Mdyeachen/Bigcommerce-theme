@@ -1,0 +1,24 @@
+<div class="col-12 col-md-6 col-lg-4">
+    <hr class="m-0">
+    <div class="card">
+        <a href="{{url}}">
+        {{> components/common/responsive-img
+        image=post.thumbnail
+        fallback_size=theme_settings.blog_size
+        lazyload=theme_settings.lazyload_mode
+        }}
+        </a>
+        <div class="card-body">
+            <a href="{{url}}"><h5 class="card-title">{{post.title}}</h5></a>
+            <p class="card-text mb-2 mt-2">
+                {{#if post.body}}
+                {{{post.body}}}
+                {{else}}
+                {{{post.summary}}}
+                {{/if}}
+            </p>
+            <a href="{{url}}">See Details</a>
+        </div>
+    </div>
+</div>
+        

@@ -1,0 +1,3 @@
+{
+  "components/epicContent/jotform-embed": "<script type=\"text/javascript\" src=\"{{dataurl}}\"></script>\n"
+}

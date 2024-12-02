@@ -1,0 +1,65 @@
+---
+blog:
+    posts:
+        limit: 10
+        pages: 120
+        summary: 110
+---
+{{#partial "head"}}
+    {{#if pagination.blog.previous}}
+        <link rel="prev" href="{{pagination.blog.previous}}">
+    {{/if}}
+    {{#if pagination.blog.next}}
+        <link rel="next" href="{{pagination.blog.next}}">
+    {{/if}}
+{{/partial}}
+
+{{#partial "page"}}
+
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+<section class="page blog">
+    {{#unless theme_settings.hide_blog_page_heading }}
+        <h1 class="page-heading">{{ blog.name }}</h1>
+    {{/unless}}
+
+    <div class="blog-page">
+        <div class="container">
+            <div class="row">
+                {{#each blog.posts}}
+                <div class="col-12 col-md-6">  
+                    <hr class="m-0">
+                    <div class="card">
+                        <a href="{{url}}">
+                            {{> components/common/responsive-img
+                                image=thumbnail
+                                fallback_size=theme_settings.blog_size
+                                lazyload=theme_settings.lazyload_mode
+                            }}
+                        </a>
+                        <div class="card-body">
+                          <a href="{{url}}">
+                            <h5 class="card-title">{{title}}</h5>
+                          </a>
+                          <p class="card-text"><small class="text-muted">{{#if author}}{{lang 'blog.posted_by' name=author}} on {{/if}}{{date_published}}</small></p>
+                          <p class="card-text mb-3 mt-3">
+                            {{#if body}}
+                                {{{body}}}
+                            {{else}}
+                                {{{summary}}}
+                            {{/if}}
+                          </p>
+                          <a href="{{url}}">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <hr>
+    <br>
+{{> components/common/paginator pagination.blog}}
+</section>
+{{/partial}}
+{{> layout/base}}

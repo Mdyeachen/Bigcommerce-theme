@@ -1,0 +1,3 @@
+{
+  "components/epicHeader/contact-info-header": "<h4 class=\"col-title\">\r\n    {{lang 'epicHeader.contact'}}\r\n</h4>\r\n<ul class=\"shop-info-address\">\r\n    <li class=\"shop-info-address__item\">{{settings.store_name}}</li>\r\n    <li class=\"shop-info-address__item\">{{settings.phone_number}}</li>\r\n    {{#if theme_settings.header-shop-address '!==' \"\" }}\r\n        <li class=\"shop-info-address__item\">{{{theme_settings.header-shop-address}}}</li>\r\n    {{/if}}\r\n    <li class=\"shop-info-address__item\">{{{settings.address}}}</li>\r\n</ul>\r\n"
+}

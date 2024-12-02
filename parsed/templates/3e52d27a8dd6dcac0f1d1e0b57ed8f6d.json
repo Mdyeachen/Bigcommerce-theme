@@ -1,0 +1,3 @@
+{
+  "components/epicContent/instagram-feed": "\r\n<section class=\"instagram-section\">\r\n    <div class=\"section-heading\">\r\n        <h3 class=\"section-title\">\r\n            <span>\r\n                {{theme_settings.insta-title}}\r\n            </span>\r\n        </h3>\r\n        <p class=\"section-description\">\r\n            {{theme_settings.insta-subtitle}}\r\n        </p>\r\n    </div>\r\n\r\n</section>\r\n"
+}

@@ -1,0 +1,3 @@
+{
+  "components/custom/header-tabs/tab-three": "<p>\n    {{theme_settings.epic_header_happiness_body}}\n</p>\n"
+}

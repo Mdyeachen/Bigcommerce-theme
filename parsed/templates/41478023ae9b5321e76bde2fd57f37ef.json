@@ -1,0 +1,3 @@
+{
+  "components/epicContent/google-translate": "<!-- google translate code to be placed where you want it to show-->\n<div id=\"google_translate_element\"></div><script type=\"text/javascript\">\nfunction googleTranslateElementInit() {\n  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,bn,es,fr,hi,ja,pa,pt,ru,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');\n}\n</script><script type=\"text/javascript\" src=\"//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit\"></script>\n"
+}
